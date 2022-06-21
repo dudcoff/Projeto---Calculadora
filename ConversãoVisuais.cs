@@ -1,6 +1,6 @@
-public class socorro 
+public class ConversaoVisuais
 {
-public static void MilhasParaQuilometroscontinha()
+    public static void QuilometrosParaMilhascontinha()
     {
         double distanciadoQuilometros, distanciaemMilhas;
         Console.WriteLine("----- QUILOMÊTOS PARA MILHAS -----\n");
@@ -10,8 +10,11 @@ public static void MilhasParaQuilometroscontinha()
 
         distanciaemMilhas = Conversao.KmParaMilhas(distanciadoQuilometros);
 
-    
-        Console.WriteLine($"\nO equivalente em milhas é aproximadamente {distanciaMilhas} milha(s)");
+        Console.WriteLine($"\nO equivalente em milhas é aproximadamente {distanciaemMilhas} milha(s)");
+
+        Console.Write("Pressione uma tecla para continuar");
+        Console.ReadKey();
+
 
         return;
     }
@@ -25,9 +28,13 @@ public static void MilhasParaQuilometroscontinha()
         Console.Write("Distância em milha: ");
         double distanciaMilhas = Convert.ToDouble(Console.ReadLine());
 
-        double distanciaQuilometros = Conversao.MilhaParaKm(distanciaMilhas);
+        // double distanciaQuilometros = Conversao.MilhaParaKm(distanciaMilhas);
+        double distanciaQuilometros = 2;
 
         Console.WriteLine($"\nO equivalente em quilômetros é aproximadamente {distanciaQuilometros} Km");
+
+        Console.Write("Pressione uma tecla para continuar");
+        Console.ReadKey();
 
         return;
     }

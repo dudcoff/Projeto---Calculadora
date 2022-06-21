@@ -1,5 +1,7 @@
 ﻿string opcaoDesejada;
 
+do
+{
 Console.Clear();
 
 Console.WriteLine("--- Calculadora ---\n");
@@ -61,7 +63,12 @@ try
         break;
 
     case "0":
-        Calculadora.ExibeSair();
+        string confirmou = Calculadora.ExibeSair();
+
+        if (confirmou == "N" || confirmou == "n")
+        {
+            opcaoDesejada = "X";
+        }
         break;
 
     case "+":
@@ -78,4 +85,5 @@ try
     {
         Console.ResetColor();
     }
+}
 while (opcaoDesejada != "0");
