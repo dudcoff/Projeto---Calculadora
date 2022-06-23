@@ -2,9 +2,10 @@ public class Calculadora
 {
     public static void CalcularSoma()
     {
+        Console.Clear();
         double x, y, resultado;
 
-        Console.WriteLine("--- Soma ---\n");
+        Console.WriteLine("--- SOMA ---\n");
         Console.WriteLine("Digite os valores.");
 
         Console.Write("X = ");
@@ -12,8 +13,7 @@ public class Calculadora
         Console.Write("Y = ");
         y = Convert.ToDouble(Console.ReadLine());
 
-        // resultado = Aritmetica.Soma(x, y);
-        resultado = 2;
+        resultado = Aritmetica.Soma(x, y);
 
         Console.WriteLine($"{x} somado com {y} é {resultado}");
 
@@ -24,9 +24,10 @@ public class Calculadora
     }
     public static void CalcularSubtracao()
     {
+        Console.Clear();
         double x, y, resultado;
 
-        Console.WriteLine("--- Subtração ---\n");
+        Console.WriteLine("--- SUBTRAÇÃO ---\n");
         Console.WriteLine("Digite os valores.");
 
         Console.Write("X = ");
@@ -34,8 +35,7 @@ public class Calculadora
         Console.Write("Y = ");
         y = Convert.ToDouble(Console.ReadLine());
 
-        // resultado = Aritmetica.Subtracao(x, y);
-        resultado = 2;
+        resultado = Aritmetica.Subtracao(x, y);
 
         Console.WriteLine($"{x} subtraindo {y} é {resultado}");
 
@@ -46,9 +46,10 @@ public class Calculadora
     }
     public static void CalcularMultiplicacao()
     {
+        Console.Clear();
         double x, y, resultado;
 
-        Console.WriteLine("--- Multiplicação ---\n");
+        Console.WriteLine("--- MULTIPLICAÇÃO ---\n");
         Console.WriteLine("Digite os valores.");
 
         Console.Write("X = ");
@@ -56,8 +57,7 @@ public class Calculadora
         Console.Write("Y = ");
         y = Convert.ToDouble(Console.ReadLine());
 
-        // resultado = Aritmetica.Multiplicacao(x, y);
-        resultado = 2;
+        resultado = Aritmetica.Multiplicacao(x, y);
 
         Console.WriteLine($"{x} multiplicado por {y} é {resultado}");
 
@@ -68,9 +68,10 @@ public class Calculadora
     }
     public static void CalcularDivisao()
     {
+        Console.Clear();
         double x, y, resultado;
 
-        Console.WriteLine("--- Divisão ---\n");
+        Console.WriteLine("--- DIVISÃO ---\n");
         Console.WriteLine("Digite os valores.");
 
         Console.Write("X = ");
@@ -84,8 +85,8 @@ public class Calculadora
         }
         else
         {
-            // resultado = Aritmetica.Divisao(x, y);
-            resultado = 2;
+            resultado = Aritmetica.Divisao(x, y);
+
             Console.WriteLine($"{x} dividido por {y} é {resultado}");
         }
 
@@ -96,9 +97,10 @@ public class Calculadora
     }
     public static void CalcularExponenciaçao()
     {
+        Console.Clear();
         double Exponenciação, x, y;
 
-        Console.WriteLine("-- EXPONENCIAÇÃO --\n");
+        Console.WriteLine("--- EXPONENCIAÇÃO ---\n");
         Console.WriteLine("Digite os valores.");
 
         Console.Write("Base: ");
@@ -110,15 +112,15 @@ public class Calculadora
 
         Console.WriteLine($"O resultado é: {Exponenciação}");
 
-        Console.Write("Pressione uma tecla para continuar");
+        Console.WriteLine("Pressione uma tecla para continuar");
         Console.ReadKey();
     }
     public static void CalcularRadiciaçao()
     {
+        Console.Clear();
         double raiz, x;
 
-        Console.Clear();
-        Console.WriteLine("-- RAIZ QUADRADA --");
+        Console.WriteLine("--- RADICIAÇÃO ---");
         Console.WriteLine("Digite os valores.");
         Console.Write("Número: ");
         x = Convert.ToDouble(Console.ReadLine());
@@ -127,14 +129,15 @@ public class Calculadora
 
         Console.WriteLine($"O resultado é: {raiz}");
 
-        Console.Write("Pressione uma tecla para continuar");
+        Console.WriteLine("Pressione uma tecla para continuar");
         Console.ReadKey();
     }
     public static void CalcularBhaskara()
     {
+        Console.Clear();
         double a, b, c, delta, x1, x2;
 
-        Console.WriteLine("-- BHASKARA--");
+        Console.WriteLine("--- BHASKARA ---");
         Console.Write("Valor a: ");
         a = Convert.ToDouble(Console.ReadLine());
 
@@ -150,12 +153,16 @@ public class Calculadora
 
         if (a <= 0)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Não é uma equação de segundo grau.");
+            Console.ResetColor();
         }
 
         else if (delta < 0)
         {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine($"Como delta = {delta}, a equação não possui raízes reais.");
+            Console.ResetColor();
         }
 
         else
@@ -164,14 +171,15 @@ public class Calculadora
             Console.WriteLine($"x1= {x1:N2} e x2= {x2:N2}");
         }
 
-        Console.Write("Pressione uma tecla para continuar");
+        Console.WriteLine("Pressione uma tecla para continuar");
         Console.ReadKey();
     }
     public static void CalcularMedia()
     {
+        Console.Clear();
         decimal a, b, Media;
 
-        Console.WriteLine("-- MÉDIA --");
+        Console.WriteLine("--- MÉDIA ---");
         Console.WriteLine("Digite os valores.");
 
         Console.Write("A: ");
@@ -183,16 +191,17 @@ public class Calculadora
 
         Console.WriteLine($"O resultado é {Media:N1}");
 
-        Console.Write("Pressione uma tecla para continuar");
+        Console.WriteLine("Pressione uma tecla para continuar");
         Console.ReadKey();
 
     }
     public static void CalcularConversoes()
     {
+        Console.Clear();
         string opçaoDesejada;
 
         Console.Clear();
-        Console.WriteLine("----- CONVERSÃO DE MEDIDA -----\n");
+        Console.WriteLine("--- CONVERSÃO DE MEDIDA ---\n");
         Console.WriteLine("[01] Quilômetros para milhas");
         Console.WriteLine("[02] Milhas para quilômetros");
         Console.WriteLine("\n[0] Voltar");
@@ -202,13 +211,12 @@ public class Calculadora
 
         switch (opçaoDesejada)
         {
-            //preciso de ajuda nessa parte
             case "1":
                 ConversaoVisuais.QuilometrosParaMilhascontinha();
                 break;
 
             case "2":
-                //milhas
+                ConversaoVisuais.MilhasParaQuilometroscontinha();
                 break;
             case "0":
                 return;
@@ -216,6 +224,7 @@ public class Calculadora
     }
     public static string ExibeSair()
     {
+        Console.Clear();
         string saida;
 
         Console.WriteLine("Deseja sair do programa?");
@@ -229,6 +238,7 @@ public class Calculadora
 
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("\nObrigado por usar meu programa!");
+                Console.ResetColor();
 
                 return saida;
 
@@ -241,12 +251,14 @@ public class Calculadora
     }
     public static void ExibeMiniintroduçao()
     {
+        Console.Clear();
         Console.WriteLine("-- Um pouco sobre mim e o motivo do projeto--");
+
         Console.WriteLine("Me chamo Maria Eduarda, tenho 16 anos e faço curso de Informática, na Etec Adolpho Berezin, estou no 1° Módulo do Ensino Técnico.");
         Console.WriteLine("Este projeto foi realizado com a intenção de por em prática os conteudos explicado pelos professores durante curso!");
-        Console.WriteLine("Quero parabenizar e agaradecer aos excelentes professores, Ermogenes Palacio e Diego Neri, por serem excelentes profissionas e conseguirem passar adiante seus conhecimentos");
+        Console.WriteLine("Quero parabenizar e agaradecer aos excelentes professores, Ermogenes Palacio e Diego Neri, por serem excelentes profissionas e conseguirem passar adiante seus conhecimentos.");
 
-        Console.Write("Pressione uma tecla para continuar");
+        Console.WriteLine("Pressione uma tecla para continuar");
         Console.ReadKey();
     }
 }
