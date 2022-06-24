@@ -58,7 +58,7 @@ try
         Calculadora.CalcularMedia();
         break;
 
-    case "C":
+    case "C" or "c":
         Calculadora.CalcularConversoes();
         break;
 

@@ -112,7 +112,7 @@ public class Calculadora
 
         Console.WriteLine($"O resultado é: {Exponenciação}");
 
-        Console.WriteLine("Pressione uma tecla para continuar");
+        Console.Write("Pressione uma tecla para continuar");
         Console.ReadKey();
     }
     public static void CalcularRadiciaçao()
@@ -252,10 +252,11 @@ public class Calculadora
     public static void ExibeMiniintroduçao()
     {
         Console.Clear();
-        Console.WriteLine("-- Um pouco sobre mim e o motivo do projeto--");
+        Console.WriteLine("-- Um pouco sobre mim e o motivo do projeto--\n");
 
         Console.WriteLine("Me chamo Maria Eduarda, tenho 16 anos e faço curso de Informática, na Etec Adolpho Berezin, estou no 1° Módulo do Ensino Técnico.");
-        Console.WriteLine("Este projeto foi realizado com a intenção de por em prática os conteudos explicado pelos professores durante curso!");
+
+        Console.WriteLine("Este projeto foi realizado com a intenção de por em prática os conteudos explicado pelos professores durante curso!\n");
         Console.WriteLine("Quero parabenizar e agaradecer aos excelentes professores, Ermogenes Palacio e Diego Neri, por serem excelentes profissionas e conseguirem passar adiante seus conhecimentos.");
 
         Console.WriteLine("Pressione uma tecla para continuar");
